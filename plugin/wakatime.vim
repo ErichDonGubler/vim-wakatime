@@ -174,7 +174,6 @@ let s:VERSION = '9.0.1'
                 endif
                 let s:nvim_async_output = ['']
                 let job = jobstart(job_cmd, {
-                    \ 'detach': 1,
                     \ 'on_stdout': function('s:NeovimAsyncInstallOutputHandler'),
                     \ 'on_stderr': function('s:NeovimAsyncInstallOutputHandler'),
                     \ 'on_exit': function('s:NeovimAsyncInstallExitHandler')})
@@ -531,7 +530,6 @@ EOF
             endif
             let s:nvim_async_output = ['']
             let job = jobstart(job_cmd, {
-                \ 'detach': 1,
                 \ 'on_stdout': function('s:NeovimAsyncOutputHandler'),
                 \ 'on_stderr': function('s:NeovimAsyncOutputHandler'),
                 \ 'on_exit': function('s:NeovimAsyncExitHandler')})
@@ -750,7 +748,6 @@ EOF
             endif
             let s:nvim_async_output_today = ['']
             let job = jobstart(job_cmd, {
-                \ 'detach': 1,
                 \ 'on_stdout': function('s:NeovimAsyncTodayOutputHandler'),
                 \ 'on_stderr': function('s:NeovimAsyncTodayOutputHandler'),
                 \ 'on_exit': function('s:NeovimAsyncTodayExitHandler')})
